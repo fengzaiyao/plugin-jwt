@@ -76,7 +76,7 @@ public class JwtPluginTokenUtil {
     }
 
     /**
-     * 生成token过期时间,如果当前时间超过改时间,token被视为过期
+     * 生成token过期时间,如果当前时间超过该时间,token被视为过期
      *
      * @param addTime token过期时长
      */

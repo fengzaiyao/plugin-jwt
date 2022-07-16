@@ -61,12 +61,12 @@
         <developer>
             <name>fengzaiyao</name>
             <email>2677176483@qq.com</email>
-            <url>https://github.com/fengzaiyao/plugin-mongo.git</url>
+            <url>https://github.com/fengzaiyao/plugin-jwt.git</url>
         </developer>
     </developers>
 
     <!--项目地址-->
-    <url>https://github.com/fengzaiyao/plugin-mongo.git</url>
+    <url>https://github.com/fengzaiyao/plugin-jwt.git</url>
 
     <!--开源协议版本-->
     <licenses>
@@ -79,9 +79,9 @@
 
     <!--项目信息-->
     <scm>
-        <connection>https://github.com/fengzaiyao/plugin-mongo.git</connection>
-        <developerConnection>https://github.com/fengzaiyao/plugin-mongo.git</developerConnection>
-        <url>https://github.com/fengzaiyao/plugin-mongo.git</url>
+        <connection>https://github.com/fengzaiyao/plugin-jwt.git</connection>
+        <developerConnection>https://github.com/fengzaiyao/plugin-jwt.git</developerConnection>
+        <url>https://github.com/fengzaiyao/plugin-jwt.git</url>
     </scm>
 
     <!--添加仓库信息-->

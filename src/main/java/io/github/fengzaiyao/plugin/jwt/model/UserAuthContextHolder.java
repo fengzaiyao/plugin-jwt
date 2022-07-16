@@ -8,6 +8,7 @@ public class UserAuthContextHolder {
 
     /**
      * 获取当前上下文用户
+     * <p>
      * LoginAuthUserInfo loginUserInfo = UserAuthContextHolder.getCurrentUser().orElseThrow(() -> new Exception("用户未登录"));
      */
     public static Optional<LoginAuthUserInfoDTO> getCurrentUser() {
