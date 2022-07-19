@@ -74,10 +74,8 @@ public class HelloController extends BaseController {
     }
 
     // 2.根据Token解析用户信息-记得在请求头中放入Token
-    @RequireCurrentUser(needUser = false)
     @GetMapping("/get-user-info")
     public LoginAuthUserInfoDTO getUserInfo() {
-        System.out.println("HelloController#getUserInfo");
         return UserAuthContextHolder.getCurrentUser().orElse(null);
     }
 }
