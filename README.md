@@ -3,9 +3,25 @@
 1.引入依赖
 ```xml
 <dependency>
-  <groupId>io.github.fengzaiyao</groupId>
-  <artifactId>plugin-jwt</artifactId>
-  <version>1.0.0</version>
+    <groupId>io.github.fengzaiyao</groupId>
+    <artifactId>plugin-jwt</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.9.0</version>
+</dependency>
+
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
 </dependency>
 ```
 
@@ -39,12 +55,13 @@ public class GlobalWebConfig implements WebMvcConfigurer {
 4.模拟获取用户信息
 ```java
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/jwt")
 public class HelloController extends BaseController {
 
-    // 1.只是模拟获取token的过程
+    // 1.获取Token
     @GetMapping("/generate-access-token")
     public AccessTokenDTO login() {
+        // 具体怎么生成AccessTokenDTO对象,看你自己的业务需求
         LoginAuthUserInfoDTO userInfo = LoginAuthUserInfoDTO.builder()
                 .uid(666L)
                 .userNo("666")
@@ -56,7 +73,7 @@ public class HelloController extends BaseController {
         return generateAccessToken(userInfo);
     }
 
-    // 2.获取token信息，记得在请求头中放入token
+    // 2.根据Token解析用户信息-记得在请求头中放入Token
     @RequireCurrentUser(needUser = false)
     @GetMapping("/get-user-info")
     public LoginAuthUserInfoDTO getUserInfo() {
